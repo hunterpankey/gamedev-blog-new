@@ -120,6 +120,32 @@
 				"url": ""
 			}
 		]
+	},
+	{
+		"slug": "hunter-pankey",
+		"name": "Hunter Pankey",
+		"image": "/assets/images/authors/hunter-pankey.png",
+		"bio": "<p>I got into game dev a few years ago on a whim as I was installing Visual Studio for work (yet again) and noticed the Unity game dev workload option in the installer. I spent an entire weekend in 2019 messing with the 2D sample game, playing with tile maps, laying out levels, and figuring out how to write some code to make key systems and warp points. I've been a developer forever, ever since my grandfather loaned me a Commodore 64 in the 80s and my dad brought home a book on BASIC programming from work. I'm definitely coming at game dev from a programming mindset and have very little training and skills in 3d modeling and the artistic side of game development, but I'm learning that side of the house bit-by-bit.</p> <p>I love that there's so much available in the Unity Asset Store, but for all the amazing things available there, the documentation is ... unevenly produced. So as I'm working with these things and getting annoyed with how many details are left out of the documentation, I'll be writing up my findings and trying to help everyone out with questions like, 'ok, but what do you actually do to make this thing work?', or, 'fine, that's how this thing nominally works, but what are the actual best practices to keep from hurting myself in the long run?'</p><p>So we'll see how it goes...</p>",
+		"companyWebsites": [],
+		"personalWebsites": [
+			{
+				"label": "HunterPankey.com",
+				"url": "https://www.hunterpankey.com"
+			},
+			{
+				"label": "Contributor: FallGuysStats",
+				"url": "https://github.com/ShootMe/FallGuysStats"
+			},
+			{
+				"label": "Creator: RockSniffer GUI",
+				"url": "https://github.com/hunterpankey/RockSnifferGui"
+			}
+		],
+		"socialWebsites": [
+			{
+				"label": "github",
+				"url": "https://github.com/hunterpankey"
+			}
+		]
 	}
 ]
-

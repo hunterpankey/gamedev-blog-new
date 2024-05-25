@@ -9,23 +9,23 @@
 	},
 	{
 		"platform": "github",
-		"url": "https://www.github.com/shanerobinson"
+		"url": "https://www.github.com/hunterpankey"
 	},
 	{
 		"platform": "instagram",
-		"url": "https://www.instagram.com/shanerobinson"
+		"url": "https://www.instagram.com/thehunterpankey"
 	},
 	{
 		"platform": "linkedin",
-		"url": "https://www.linkedin.com/in/rshanerobinson"
+		"url": false
 	},
 	{
 		"platform": "piedpiper",
-		"url": "https://www.piedpiper.com/shanerobinson"
+		"url": false
 	},
 	{
 		"platform": "pinterest",
-		"url": "https://www.pinterest.com/shanerobinson"
+		"url": false
 	},
 	{
 		"platform": "rss",
@@ -33,7 +33,7 @@
 	},
 	{
 		"platform": "twitter",
-		"url": "https://www.twitter.com/shanerobinson"
+		"url": false
 	},
 	{
 		"platform": "youtube",
