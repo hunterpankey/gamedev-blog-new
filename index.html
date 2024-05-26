@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <link rel="alternate" type="application/atom+xml" title="RSS Feed for GameDev Shenanigans" href="/feed.xml"/>
     
-    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
 <meta name="author" content="hunter-pankey" />
 <meta name="description" content="Helping fellow gamedev wranglers make sense of this infuriating hobby" />
 <link rel="canonical" href="http://localhost:8080/" />
@@ -161,99 +162,140 @@ pre[class*="language-"] {
   <div class="px-8 md:px-16 lg:px-32">
     <div class="flex justify-between h-16">
       <div class="flex">
-        <div class="flex items-center">
+        <div
+          class="flex items-center">
           
-          <a aria-label="Mobile Logo" href="/" class="block md:hidden text-gray-700 hover:text-gray-800" alt="Mobile Logo">
-            <svg class="fill-current fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" aria-describedby="symbol-logo-mobile-desc" aria-labelledby="symbol-logo-mobile-desc" role="group">
-                  <desc id="symbol-logo-mobile-desc-content">The Mobile Logo</desc>
-                  <use xlink:href="#svg-logo-mobile"></use>
-              </svg>
+          <a
+            aria-label="Mobile Logo"
+            href="/"
+            class="block md:hidden text-gray-700 hover:text-gray-800"
+            alt="Mobile Logo">
+            <img src="/assets/images/home/logo_small.png" class="h-8 w-auto"/>
           </a>
           
-          <a aria-label="Desktop Logo" href="/" class="hidden md:block text-gray-700 hover:text-gray-800" alt="Desktop Logo">
-            <svg class="fill-current fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" aria-describedby="symbol-logo-desc" aria-labelledby="symbol-logo-desc" role="group">
-                  <desc id="symbol-logo-desc-content">The Logo</desc>
-                  <use xlink:href="#svg-logo"></use>
-              </svg>
+          <a
+            aria-label="Desktop Logo"
+            href="/"
+            class="hidden md:block text-gray-700 hover:text-gray-800"
+            alt="Desktop Logo">
+            <img src="/assets/images/home/logo_small.png" class="h-8 w-auto"/>
           </a>
         </div>
-        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <div class="flex items-center">
+          <a class="px-3 py-2 text-sm font-medium rounded-md items-center" aria-label="Desktop Logo" href="/" alt="Desktop Logo">
+            <h4 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+              GameDev Shenanigans
+            </h4>
+          </a>
+        </div>
+        <div
+          class="hidden sm:ml-6 sm:flex sm:items-center">
           
           
             <a  alt="Link to Home" class=" px-3 py-2 text-sm font-medium rounded-md items-center  bg-gray-100 text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               Home
             </a>
           
-            <a href="/about/" alt="Link to About" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/about/"  alt="Link to About" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               About
             </a>
           
-            <a href="/blog/" alt="Link to Blog" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/blog/"  alt="Link to Blog" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               Blog
             </a>
           
-            <a href="/contact/" alt="Link to Contact" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/contact/"  alt="Link to Contact" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               Contact
             </a>
           
         </div>
       </div>
-
       
-
       
-      <div class="flex items-center -mr-2 sm:hidden">
+      <div
+        class="flex items-center -mr-2 sm:hidden">
         
-        <button @click="open = !open" class="inline-flex items-center justify-center p-2 text-gray-500 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-teal-100 focus:outline-none focus:text-gray-500 focus:text-gray-500" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" aria-label="Main menu" x-bind:aria-expanded="open">
+        <button
+          @click="open = !open"
+          class="inline-flex items-center justify-center p-2 text-gray-500
+            transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-teal-100 focus:outline-none focus:text-gray-500 focus:text-gray-500"
+          x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+          aria-label="Main menu"
+          x-bind:aria-expanded="open">
           
-          <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': open, 'block': !open }"
+            class="block w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
           
-          <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': !open, 'block': open }"
+            class="hidden w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
     </div>
   </div>
-
-  <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-    <div class="pt-2 pb-3">
+  <div
+    x-description="Mobile menu, toggle classes based on menu state."
+    x-state:on="Menu open"
+    x-state:off="Menu closed"
+    :class="{ 'block': open, 'hidden': !open }"
+    class="hidden sm:hidden">
+    <div
+      class="pt-2 pb-3">
       
       
         <a  alt="Link to Home" class="block pl-4 pr-4 py-2 bg-gray-700 text-gray-300 text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           Home
         </a>
       
-        <a href="/about/" alt="Link to About" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/about/"  alt="Link to About" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           About
         </a>
       
-        <a href="/blog/" alt="Link to Blog" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/blog/"  alt="Link to Blog" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           Blog
         </a>
       
-        <a href="/contact/" alt="Link to Contact" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/contact/"  alt="Link to Contact" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           Contact
         </a>
       
-
     </div>
-
   </div>
 </nav>
 
       
       
         
-        <header class="relative bg-black lg:overflow-hidden h-1/1 sm:h-1/1">
-  <div class="absolute inset-0 z-negative  bg-fixed bg-no-repeat bg-cover bg-center opacity-50 md:opacity-75" style="background-image: url(/assets/images/home/pexels-mikhail-peace-939247406-20236201.jpg);"></div>
-
-  
-  <div class="absolute flex flex-col items-start justify-center h-full text-white max-w-screen-xl px-8 md:px-16 lg:px-32">
+        <div
+  class="mb-16 
+  h-1/1 sm:
+  h-1/1">
+  <div
+    class="h-full main-carousel"
+    data-flickity='{"lazyLoad":"1", "wrapAround":true, "autoPlay": 8000, "draggable": false}'>
+    
+      <div
+        class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell"
+        style="background-image: url(/assets/images/home/OladimejiAjegbile-frustredmanatlaptop.jpg);">
+        
+        <div class="absolute flex flex-col items-start justify-center h-full text-blue-600 max-w-screen-xl px-8 md:px-16 lg:px-32">
   <div class="text-4xl font-semibold leading-tight  md:text-6xl">
-    Making sense of game dev, <br />once package at a time.
+    Making sense of game dev, <br />one package at a time.
   </div>
   <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl ">
     You actually R'd the F'ing M this time, but that didn't really help clarify anything.
@@ -263,9 +305,82 @@ pre[class*="language-"] {
       <a href="/blog/" class="p-4 rounded-lg text-white bg-teal-700 hover:text-white hover:bg-teal-700 border-teal-900">To the articles!</a>
     </div>
   
+</div></div>
+    
+      <div
+        class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell"
+        style="background-image: url(/assets/images/home/AndreaPiacquadio-frustratedwomanatlaptop.jpg);">
+        
+        <div class="absolute flex flex-col items-start justify-center h-full text-blue-600 max-w-screen-xl px-8 md:px-16 lg:px-32">
+  <div class="text-4xl font-semibold leading-tight  md:text-6xl">
+    Making sense of game dev, <br />one package at a time.
+  </div>
+  <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl ">
+    You actually R'd the F'ing M this time, but that didn't really help clarify anything.
+  </div>
+  
+    <div class="w-full mt-12 ">
+      <a href="/blog/" class="p-4 rounded-lg text-white bg-teal-700 hover:text-white hover:bg-teal-700 border-teal-900">To the articles!</a>
+    </div>
+  
+</div></div>
+    
+      <div
+        class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell"
+        style="background-image: url(/assets/images/home/TimGouw-angrydeveloper.jpg);">
+        
+        <div class="absolute flex flex-col items-start justify-center h-full text-blue-600 max-w-screen-xl px-8 md:px-16 lg:px-32">
+  <div class="text-4xl font-semibold leading-tight  md:text-6xl">
+    Making sense of game dev, <br />one package at a time.
+  </div>
+  <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl ">
+    You actually R'd the F'ing M this time, but that didn't really help clarify anything.
+  </div>
+  
+    <div class="w-full mt-12 ">
+      <a href="/blog/" class="p-4 rounded-lg text-white bg-teal-700 hover:text-white hover:bg-teal-700 border-teal-900">To the articles!</a>
+    </div>
+  
+</div></div>
+    
+      <div
+        class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell"
+        style="background-image: url(/assets/images/home/AndreaPiacquadio-screamingwoman.jpg);">
+        
+        <div class="absolute flex flex-col items-start justify-center h-full text-blue-600 max-w-screen-xl px-8 md:px-16 lg:px-32">
+  <div class="text-4xl font-semibold leading-tight  md:text-6xl">
+    Making sense of game dev, <br />one package at a time.
+  </div>
+  <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl ">
+    You actually R'd the F'ing M this time, but that didn't really help clarify anything.
+  </div>
+  
+    <div class="w-full mt-12 ">
+      <a href="/blog/" class="p-4 rounded-lg text-white bg-teal-700 hover:text-white hover:bg-teal-700 border-teal-900">To the articles!</a>
+    </div>
+  
+</div></div>
+    
+      <div
+        class="w-full h-full bg-center bg-no-repeat bg-cover carousel-cell"
+        style="background-image: url(/assets/images/home/PetrGanaj-roaringlion.jpg);">
+        
+        <div class="absolute flex flex-col items-start justify-center h-full text-blue-600 max-w-screen-xl px-8 md:px-16 lg:px-32">
+  <div class="text-4xl font-semibold leading-tight  md:text-6xl">
+    Making sense of game dev, <br />one package at a time.
+  </div>
+  <div class="pt-4 pr-12 text-lg font-light md:text-2xl lg:text-3xl ">
+    You actually R'd the F'ing M this time, but that didn't really help clarify anything.
+  </div>
+  
+    <div class="w-full mt-12 ">
+      <a href="/blog/" class="p-4 rounded-lg text-white bg-teal-700 hover:text-white hover:bg-teal-700 border-teal-900">To the articles!</a>
+    </div>
+  
+</div></div>
+    
+  </div>
 </div>
-
-</header>
       
 
       
@@ -280,92 +395,7 @@ pre[class*="language-"] {
 
   
 
-  <p>We set out to build a starter project template for <a href="https://11ty.dev" title="11ty Static Site Generator">11ty</a> that has <a href="https://tailwindcss.com" title="TailwindCSS Utility-First CSS Framework">TailwindCSS</a> and <a href="https://github.com/alpinejs/alpine" title="Alpine.js : Think of it like Tailwind for JavaScript">Alpine.js</a> baked in.</p>
-<p>Version 1.0.0 morphed into a fully-configurable text-based CMS for managing small websites with easy-to-manage configuration files in the <code>/src/_data</code> directory.</p>
-<div class="wrapper p-4 mt-4 bg-indigo-100 border border-indigo-300 text-lg italic rounded-full text-center">
-<p><strong><a href="/blog/">START HERE:</a> The <a href="/blog/">Blog Posts</a> cover the main features of the system.</strong></p>
-</div>
-<h2>Install and Deploy</h2>
-<p>To automatically deploy this Template to <a href="https://www.netlify.com/pricing/">Netlify for free hosting</a>, make sure you’re logged in to your Netlify account and then simply click the <code>Deploy to netlify</code> button below.</p>
-<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/11ta/11ta-template"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a></p>
-<p><strong>Want to install and develop locally?</strong> Hop over to the <a href="https://github.com/11ta/11ta-template/">GitHub repo</a> and follow the instructions in the README.</p>
-<div class="wrapper p-4 border-t border-b border-indigo-300 mt-4 ">
-<table>
-<thead>
-<tr>
-<th style="text-align:left"></th>
-<th style="text-align:right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Current Deploy Status:</strong></td>
-<td style="text-align:right"><a href="https://app.netlify.com/sites/11ta/deploys"><img src="https://api.netlify.com/api/v1/badges/e6eb38e1-d081-46ea-a4f6-4d3d36ab7036/deploy-status" alt="Netlify Status"></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2>🔥 Credit 🔥</h2>
-<p>First and foremost, I want to credit the <a href="https://11ty.dev">11ty</a> community, especially those listed in the <a href="https://www.11ty.dev/docs/starter/">starter projects</a>!</p>
-<p>Specifically, the following starter projects helped me understand the power and flexibility of 11ty and from their examples I was able to extend the functionality to build this system:</p>
-<ul>
-<li>🔥 <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog</a> by <a href="https://twitter.com/zachleat">Zach Leatherman</a></li>
-<li>🔥 <a href="https://github.com/eastslopestudio/eleventy-starter">eastslopestudio-eleventy-starter</a> by <a href="https://twitter.com/ryanscherler">Ryan Scherler</a></li>
-<li>🔥 <a href="https://github.com/philhawksworth/eleventyone">eleventyone</a> by <a href="https://twitter.com/philhawksworth">Phil Hawksworth</a></li>
-<li>🔥 <a href="https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter">eleventy-tailwind-alpinejs-starter</a> by <a href="https://gregwolanski.com/">Greg Wolanski</a></li>
-<li>🔥 <a href="https://github.com/marcamos/jet">jet</a> by <a href="https://twitter.com/marcamos">Marc Amos</a></li>
-</ul>
-<h2>Features</h2>
-<p>In addition to the Structural, Color, and Frontmatter contols listed below, the system also has the following features baked in:</p>
-<ul>
-<li><strong>SIAB</strong> <em>(site in a box)</em> … Update the site settings in <code>/src/_data/meta.js</code>, content on the <code>index.md</code> and <code>about.md</code> pages, replace the <code>/src/posts/*.md</code> files with your own content and your new site is fully functional and ready to publish!</li>
-<li><strong>100 Lighthouse scores</strong> across the site’s Pages and Posts (<em>not just on pages with a little text and no images</em> 😉).</li>
-<li>ATOM feed at <a href="/feed.xml">/feed.xml</a>.</li>
-<li>Inlined CSS for the <a href="https://prismjs.com/">Prism Okaidia</a> syntax highlight theme.</li>
-<li>Webpack to bundle up <a href="https://github.com/alpinejs/alpine">Alpine.js</a> and any custom JS you want to include.</li>
-<li>Purged CSS and Minified source on production builds.</li>
-<li><a href="/asdf">Custom 404</a> which lists 10 most recent Posts.</li>
-<li>Contact form automagically works if <a href="https://docs.netlify.com/forms/setup/">hosted at Netlify</a>.</li>
-<li>…other things I’m probably forgetting but will add when I think of them.</li>
-</ul>
-<h2>Structural and Color Controls</h2>
-<p>You can completely control:</p>
-<ul>
-<li>Multiple Authors in <code>/src/_data/authors.json</code>.</li>
-<li>FOUR native <a href="/blog/">Posts List</a> and <a href="/tags/frontmatter/">Tags List</a> layout in the <code>src/_data/structures.js</code> file via, <code>postListStyle:</code> and <code>tagListStyle:</code> keys.</li>
-<li>Colors of the NavBar, Headings, Buttons, etc. in <code>/src/_data/colors.js</code>.</li>
-<li>Site META and defaults in <code>/src/_data/meta.js</code>.</li>
-<li>Social Links icons in the Footer in <code>/src/_data/social.json</code>.</li>
-<li>Social Share icons in the <code>/src/_includes/components/socialshare.njk</code> file.</li>
-<li>And site-wide structures like max-width and display toggles of different content blocks in <code>/src/_data/structure.js</code>.</li>
-</ul>
-<h2>Frontmatter Controls</h2>
-<p>The <strong>Frontmatter</strong> in your .md Posts and Pages files also allows you to manage:</p>
-<ul>
-<li><a href="/2020/09/11/manage-hero-graphics-carousels-splits-and-video/">Heros</a> <em>(like on this home page)</em> of types: <strong>carousel, graphic, video,</strong> and <strong>split</strong>. <em>(Actually, you can add those Hero types to <strong>ANY</strong> Page or Post just by using the Frontmatter.)</em></li>
-<li><a href="/2020/09/06/featured-post-images/">Featured Images</a> <em>(full-width banners at the top of the page just like in Wordpress)</em>.</li>
-<li><a href="/2020/09/10/site-meta-og-and-twitter-cards/">SEO overrides for OG and Twitter cards</a> for Title, Description, and Images.</li>
-</ul>
-<h2>Native Shortcodes for Content Controls</h2>
-<p>There are several <strong>Shortcodes</strong> <em>(both single and paired)</em> and <strong>Filters</strong> to allow Editors to manage:</p>
-<ul>
-<li><a href="/2020/09/03/wrap-and-columns-shortcodes/">Multi-column content</a> <em>(without writing CSS)</em>.</li>
-<li><a href="/2020/09/09/svg-shortcode/">SVG Sprites</a> controls across the system and for inserting in .md Posts and Pages files.</li>
-<li>Custom Date display formats at the point of use.</li>
-<li><a href="/2020/09/04/description-list-shortcodes/">Description Lists</a> for content like FAQs, Lists, etc.</li>
-<li><a href="/2020/09/03/wrap-and-columns-shortcodes/">Wrapper</a> for managing blocks with background images, borders, etc.</li>
-<li><a href="/2020/09/08/youtube-video-embed/">YouTube embed shortcode</a> that allows you to control and add an iFrame title <em>(required for accessability and Lighthouse scores)</em>, width/height ratio, and set the start time in “m:ss” format so you don’t have to manually count the seconds.</li>
-</ul>
-<h2>Planned</h2>
-<ul>
-<li>Search</li>
-<li>More Structural controls for Index Page</li>
-<li>Easy add Collections: Projects, Services, Jobs, etc.</li>
-<li>“Themed” versions for Portfolios/Creatives, Agencies, Digital Gardens, etc.</li>
-<li>Fully documented migration of Wordpress to 11ty</li>
-<li><a href="https://snipcart.com/">Snipcart</a> integration</li>
-</ul>
-
+  
 
 </article>
         </main>
@@ -435,6 +465,9 @@ pre[class*="language-"] {
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     
+    
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
     
 
   </body>

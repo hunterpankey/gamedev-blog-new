@@ -161,34 +161,45 @@ pre[class*="language-"] {
   <div class="px-8 md:px-16 lg:px-32">
     <div class="flex justify-between h-16">
       <div class="flex">
-        <div class="flex items-center">
+        <div
+          class="flex items-center">
           
-          <a aria-label="Mobile Logo" href="/" class="block md:hidden text-gray-700 hover:text-gray-800" alt="Mobile Logo">
-            <svg class="fill-current fill-current w-16 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" aria-describedby="symbol-logo-mobile-desc" aria-labelledby="symbol-logo-mobile-desc" role="group">
-                  <desc id="symbol-logo-mobile-desc-content">The Mobile Logo</desc>
-                  <use xlink:href="#svg-logo-mobile"></use>
-              </svg>
+          <a
+            aria-label="Mobile Logo"
+            href="/"
+            class="block md:hidden text-gray-700 hover:text-gray-800"
+            alt="Mobile Logo">
+            <img src="/assets/images/home/logo_small.png" class="h-8 w-auto"/>
           </a>
           
-          <a aria-label="Desktop Logo" href="/" class="hidden md:block text-gray-700 hover:text-gray-800" alt="Desktop Logo">
-            <svg class="fill-current fill-current h-8 hover:{{ colors.logoCustom.hover or colors.logoDefault.hover }}" aria-describedby="symbol-logo-desc" aria-labelledby="symbol-logo-desc" role="group">
-                  <desc id="symbol-logo-desc-content">The Logo</desc>
-                  <use xlink:href="#svg-logo"></use>
-              </svg>
+          <a
+            aria-label="Desktop Logo"
+            href="/"
+            class="hidden md:block text-gray-700 hover:text-gray-800"
+            alt="Desktop Logo">
+            <img src="/assets/images/home/logo_small.png" class="h-8 w-auto"/>
           </a>
         </div>
-        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <div class="flex items-center">
+          <a class="px-3 py-2 text-sm font-medium rounded-md items-center" aria-label="Desktop Logo" href="/" alt="Desktop Logo">
+            <h4 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+              GameDev Shenanigans
+            </h4>
+          </a>
+        </div>
+        <div
+          class="hidden sm:ml-6 sm:flex sm:items-center">
           
           
-            <a href="/" alt="Link to Home" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/"  alt="Link to Home" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               Home
             </a>
           
-            <a href="/about/" alt="Link to About" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/about/"  alt="Link to About" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               About
             </a>
           
-            <a href="/blog/" alt="Link to Blog" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+            <a  href="/blog/"  alt="Link to Blog" class=" px-3 py-2 text-sm font-medium rounded-md items-center  text-gray-700 hover:text-gray-800  focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
               Blog
             </a>
           
@@ -198,39 +209,63 @@ pre[class*="language-"] {
           
         </div>
       </div>
-
       
-
       
-      <div class="flex items-center -mr-2 sm:hidden">
+      <div
+        class="flex items-center -mr-2 sm:hidden">
         
-        <button @click="open = !open" class="inline-flex items-center justify-center p-2 text-gray-500 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-teal-100 focus:outline-none focus:text-gray-500 focus:text-gray-500" x-bind:aria-label="open ? 'Close main menu' : 'Main menu'" aria-label="Main menu" x-bind:aria-expanded="open">
+        <button
+          @click="open = !open"
+          class="inline-flex items-center justify-center p-2 text-gray-500
+            transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-teal-100 focus:outline-none focus:text-gray-500 focus:text-gray-500"
+          x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+          aria-label="Main menu"
+          x-bind:aria-expanded="open">
           
-          <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': open, 'block': !open }"
+            class="block w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
           
-          <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            x-state:on="Menu open"
+            x-state:off="Menu closed"
+            :class="{ 'hidden': !open, 'block': open }"
+            class="hidden w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
     </div>
   </div>
-
-  <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-    <div class="pt-2 pb-3">
+  <div
+    x-description="Mobile menu, toggle classes based on menu state."
+    x-state:on="Menu open"
+    x-state:off="Menu closed"
+    :class="{ 'block': open, 'hidden': !open }"
+    class="hidden sm:hidden">
+    <div
+      class="pt-2 pb-3">
       
       
-        <a href="/" alt="Link to Home" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/"  alt="Link to Home" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           Home
         </a>
       
-        <a href="/about/" alt="Link to About" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/about/"  alt="Link to About" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           About
         </a>
       
-        <a href="/blog/" alt="Link to Blog" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
+        <a  href="/blog/"  alt="Link to Blog" class="block pl-4 pr-4 py-2  hover:text-gray-600 hover:bg-gray-100   text-base font-medium  text-gray-500  focus:outline-none focus:text-gray-700 focus:bg-gray-300 transition duration-150 ease-in-out">
           Blog
         </a>
       
@@ -238,9 +273,7 @@ pre[class*="language-"] {
           Contact
         </a>
       
-
     </div>
-
   </div>
 </nav>
 
@@ -271,16 +304,6 @@ pre[class*="language-"] {
         <h2 class="text-3xl font-extrabold leading-8 tracking-tight text-gray-600 sm:text-3xl sm:leading-9">
           You wanna talk about it?
         </h2>
-        <p class="mt-3 text-lg leading-6 text-gray-500">
-          This contact form is fully functional and will automatically work if you
-          <a href="https://docs.netlify.com/forms/setup/" target="_blank">host on Netlify!</a>
-          <br><br> The address info below is managed in
-          <code>/src/_data/meta.js</code>. <br><br> Note the difference in
-          <code>address.phoneDisplay</code>
-          and
-          <code>address.phoneCall</code>
-          to ensure mobile users will be able to correctly dial just by pressing the phone link.
-        </p>
         <dl class="mt-8 text-base leading-6 text-gray-500">
           <div>
             <dt class="sr-only">Postal address</dt>
@@ -328,58 +351,55 @@ pre[class*="language-"] {
       <div class="max-w-lg mx-auto lg:max-w-none">
         <form
           name="contact"
-          action="/thankyou"
+          action="https://getform.io/f/zazkznvb"
+          enctype="multipart/form-data"
           method="POST"
-          data-netlify-recaptcha="true"
-          data-netlify-honeypot="bot-field"
-          data-netlify="true"
+          target="_blank"
           class="grid grid-cols-1 row-gap-6">
-          <p class="hidden">
-            <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
-          </p>
           <div>
             <label for="full_name" class="sr-only">Full name</label>
             <div class="relative rounded-md shadow-sm">
               <input
-                id="full_name"
-                name="name"
+                type="text"
                 class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
-                placeholder="Full name">
+                name="name"
+                id="full_name"
+                placeholder="Name">
             </div>
           </div>
           <div>
-            <label for="email" class="sr-only">Email</label>
+            <label for="contact_form_email" class="sr-only">Email</label>
             <div class="relative rounded-md shadow-sm">
               <input
-                id="email"
-                name="email"
                 type="email"
                 class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
+                name="email"
+                id="contact_form_email"
                 placeholder="Email">
             </div>
           </div>
           <div>
-            <label for="phone" class="sr-only">Phone</label>
-            <div class="relative rounded-md shadow-sm">
-              <input
-                id="phone"
-                name="phone"
-                class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
-                placeholder="Phone">
-            </div>
-          </div>
-          <div>
-            <label for="message" class="sr-only">Message</label>
+            <label for="contact_form_message" class="sr-only">Message</label>
             <div class="relative rounded-md shadow-sm">
               <textarea
-                id="message"
                 name="message"
-                rows="4"
                 class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
+                id="contact_form_message"
                 placeholder="Message"></textarea>
             </div>
           </div>
-          <div data-netlify-recaptcha="true"></div>
+          <div>
+            <label for="contact-form-file" class="sr-only">Attachments</label>
+            <div class="relative rounded-md shadow-sm">
+              <input
+                type="file"
+                name="file"
+                class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
+                id="contact-form-file"
+                placeholder="Attach files"/>
+            </div>
+          </div>
+          <input type="hidden" name="_asdfasdfasdfasdf" style="display:none !important">
           <div class="">
             <span class="inline-flex rounded-md shadow-sm">
               <button
@@ -390,18 +410,9 @@ pre[class*="language-"] {
             </span>
           </div>
         </form>
-        <div class="p-4 italic text-gray-600 bg-indigo-100 border rounded-lg border-indego-300">This form uses the
-          <a
-            class="font-semibold text-indigo-700 underline"
-            href="https://docs.netlify.com/forms/spam-filters/#extra-spam-prevention">basic spam and recaptcha features provided by
-            Netlify</a>
-          . But you could wire in your own form validation if you like. Take a look at
-          <a class="font-semibold text-indigo-700 underline" href="https://github.com/mattkingshott/iodine">Iodine.js</a>
-          if you don't already have a fave form validator.</div>
       </div>
-    </div>
+    </form>
   </div>
-</div>
 
 </article>
         </main>
