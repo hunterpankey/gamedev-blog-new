@@ -17,6 +17,10 @@ pagination:
   alias: posts
 ---
 
+<div class="mt-6">
+  {% set tags = collections.tagList %}
+  {% include "components/tagpills.njk" %}
+</div>
 {% set postslist = posts | reverse %}
 {# 
   Allows a user to easily change the Tag List Style.
