@@ -16,6 +16,7 @@ module.exports = {
 		city: 'New York',
 		state: 'NY',
 		zip: '',
+		country: 'USA',
 		phoneDisplay: '',
 		phoneCall: '',
 		email: 'hunter@hunterpankey.com',

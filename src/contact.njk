@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 4        # order to display in the nav
 seo:
   title: Contact Me!
-  description: Send me a message about gamedev or whatnot...
+  description: Send me a message about gamedev or whatnot
 ---
 
 <div class="relative bg-white">
@@ -22,75 +22,79 @@ seo:
           <div>
             <dt class="sr-only">Postal address</dt>
             <dd>
-              <p>{{ meta.address.street }}</p>
-              <p>{{ meta.address.city }}, {{ meta.address.state }}
-                {{ meta.address.zip }}</p>
+              {# <p>{{ meta.address.street }}</p> #}
+              <p>{{ meta.address.city }}, {{ meta.address.state }}{# {{ meta.address.zip }} #}, {{ meta.address.country }}
+              </p>
             </dd>
-          </div>
-          <div class="mt-6">
-            <dt class="sr-only">Phone number</dt>
-            <dd class="flex">
-              <svg class="flex-shrink-0 w-6 h-6 text-gray-400" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516
-                    5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-              <span class="ml-3">
-                <a class="hover:underline" href="tel:{{ meta.address.phoneCall }}">{{ meta.address.phoneDisplay }}</a>
-              </span>
-            </dd>
-          </div>
-          <div class="mt-3">
-            <dt class="sr-only">Email</dt>
-            <dd class="flex">
-              <svg class="flex-shrink-0 w-6 h-6 text-gray-400" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <span class="ml-3">
-                <a class="hover:underline" href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>
-              </span>
-            </dd>
-          </div>
-        </dl>
+          </p>
+        </dd>
       </div>
-    </div>
-    <div class="px-4 py-16 bg-white sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
-      <div class="max-w-lg mx-auto lg:max-w-none">
-        <form
-          name="contact"
-          action="https://getform.io/f/{{meta.contactFormId}}"
-          enctype="multipart/form-data"
-          method="POST"
-          target="_blank"
-          class="grid grid-cols-1 row-gap-6">
-          <div>
-            <label for="full_name" class="sr-only">Full name</label>
-            <div class="relative rounded-md shadow-sm">
-              <input
-                type="text"
-                class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
-                name="name"
-                id="full_name"
-                placeholder="Name">
-            </div>
-          </div>
-          <div>
-            <label for="contact_form_email" class="sr-only">Email</label>
-            <div class="relative rounded-md shadow-sm">
-              <input
-                type="email"
-                class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
-                name="email"
-                id="contact_form_email"
-                placeholder="Email">
-            </div>
+      {% if meta.address.phoneCall or meta.address.phoneDisplay %}
+        <div class="mt-6">
+          <dt class="sr-only">Phone number</dt>
+          <dd class="flex">
+            <svg class="flex-shrink-0 w-6 h-6 text-gray-400" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516
+                  5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span class="ml-3">
+              <a class="hover:underline" href="tel:{{ meta.address.phoneCall }}">{{ meta.address.phoneDisplay }}</a>
+            </span>
+          </dd>
+        </div>
+      {% endif %}
+      {% if meta.address.email %}
+        <div class="mt-3">
+          <dt class="sr-only">Email</dt>
+          <dd class="flex">
+            <svg class="flex-shrink-0 w-6 h-6 text-gray-400" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="ml-3">
+              <a class="hover:underline" href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>
+            </span>
+          </dd>
+        </div>
+      {% endif %}
+    </dl>
+  </div>
+</div>
+<div class="px-4 py-16 bg-white sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+  <div class="max-w-lg mx-auto lg:max-w-none">
+    <form
+      name="contact"
+      action="https://getform.io/f/{{ meta.contactFormId }}"
+      enctype="multipart/form-data"
+      method="POST"
+      target="_blank"
+      class="grid grid-cols-1 row-gap-6">
+      <div>
+        <label for="full_name" class="sr-only">Full name</label>
+        <div class="relative rounded-md shadow-sm">
+          <input
+            type="text"
+            class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
+            name="name"
+            id="full_name"
+            placeholder="Name"></div>
+        </div>
+        <div>
+          <label for="contact_form_email" class="sr-only">Email</label>
+          <div class="relative rounded-md shadow-sm">
+            <input
+              type="email"
+              class="block w-full px-4 py-3 mb-6 placeholder-gray-500 transition duration-150 ease-in-out form-input"
+              name="email"
+              id="contact_form_email"
+              placeholder="Email"></div>
           </div>
           <div>
             <label for="contact_form_message" class="sr-only">Message</label>
@@ -114,19 +118,19 @@ seo:
             </div>
           </div>
           <input type="hidden" name="_asdfasdfasdfasdf" style="display:none !important">
-          <div class="">
-            <span class="inline-flex rounded-md shadow-sm">
-              <button
-                type="submit"
-                class="py-4 px-6 my-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{
-                  colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg
-                  }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or
-                  colors.buttonCustom.border }}">
-                Submit
-              </button>
-            </span>
-          </div>
-        </form>
-      </div>
-    </form>
-  </div>
+            <div class="">
+              <span class="inline-flex rounded-md shadow-sm">
+                <button
+                  type="submit"
+                  class="py-4 px-6 my-4 rounded-lg {{ colors.buttonDefault.text or colors.buttonCustom.text }} hover:{{
+                    colors.buttonDefault.textHover or colors.buttonCustom.textHover }} {{ colors.buttonDefault.bg or colors.buttonCustom.bg
+                    }} hover:{{ colors.buttonDefault.bgHover or colors.buttonCustom.bgHover }} {{ colors.buttonDefault.border or
+                    colors.buttonCustom.border }}">
+                  Submit
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </form>
+    </div>
