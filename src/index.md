@@ -25,7 +25,7 @@ heroSettings:
     opacityMobile: opacity-50 # options opacity-n, 5, 10, 15, 20, 25, 50, 75, 100 (default)
     opacityDesktop: opacity-75 # Leave blank to inherit opacityMobile, use same options as opacityMobile
   headingText: Making sense of game dev, <br />one package at a time.
-  headingTextColor: text-blue-600 # default = text-white (can use any TailwindCSS text-[color]-[xxx])
+  headingTextColor:  # default = text-white (can use any TailwindCSS text-[color]-[xxx])
   headingTextCase: # default = as typed - options: uppercase, lowercase, capitalize
   subheadingText: You actually R'd the F'ing M this time, but that didn't really help clarify anything.
   subheadingTextColor: # Leave empty to inherit headingTextColor or default (text-white) or use any text-[color]-[xxx]

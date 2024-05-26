@@ -4,13 +4,15 @@
   h-1/1" }}">
   <div
     class="h-full main-carousel"
-    data-flickity='{"lazyLoad":"1", "wrapAround":true, "autoPlay": 8000, "draggable": false}'>
+    data-flickity='{"lazyLoad":"1", "wrapAround":true, "autoPlay": 8000, "draggable": false, "prevNextButtons": true,
+      "pageDots": false}'>
     {% for image in heroSettings.carousel.images %}
       <div
         class="w-full h-full {{ heroSettings.bg.imagePosition or 'bg-center' }} bg-no-repeat bg-cover carousel-cell"
         style="background-image: url(/assets/images/{{ image }});">
         {# Shared across hero components  #}
-        {% include "components/hero-text-overlay.njk" %}</div>
+        {% include "components/hero-text-overlay.njk" %}
+      </div>
     {% endfor %}
   </div>
 </div>
