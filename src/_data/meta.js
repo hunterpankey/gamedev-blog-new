@@ -20,4 +20,7 @@ module.exports = {
 		phoneCall: '',
 		email: 'hunter@hunterpankey.com',
 	},
+	contactFormId: "zazkznvb",
+	blogDefaultThumbFull: "/assets/images/site/blog-post-game-controller.jpg",
+	blogDefaultThumb: "/site/blog-post-game-controller.jpg"
 }
