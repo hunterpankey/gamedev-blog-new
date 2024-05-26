@@ -9,6 +9,7 @@ module.exports = {
 	authorName: 'Hunter Pankey',
 	authorURL: 'hunter-pankey',
 	authorEmail: 'hunter@hunterpankey.com',
+	copyrightName: 'Hunter Pankey',
 	twitterSite: '',
 	twitterCreator: '',
 	address: {
