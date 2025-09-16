@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>GameDev Shenanigans</title>
   <subtitle>Helping fellow gamedev wranglers make sense of this infuriating hobby</subtitle>
-  <link href="http://localhost:8080"/>
-  <link href="http://localhost:8080/feed.xml" rel="self"/>
+  <link href="https://gamedev.hunterpankey.com"/>
+  <link href="https://gamedev.hunterpankey.com/feed.xml" rel="self"/>
   <updated>2025-09-16T03:00:00Z</updated>
-  <id>http://localhost:8080</id>
+  <id>https://gamedev.hunterpankey.com</id>
   <author>
     <name>Hunter Pankey</name>
     <email>hunter@hunterpankey.com</email>
@@ -13,9 +13,9 @@
     
     <entry>
       <title>May 2024: Stuff I&#39;ve Done in Unity Lately</title>
-      <link href="http://localhost:8080/2024/05/10/may-2024-stuff-ive-done-in-unity-lately/"/>
+      <link href="https://gamedev.hunterpankey.com/2024/05/10/may-2024-stuff-ive-done-in-unity-lately/"/>
       <updated>2024-05-10T18:30:00Z</updated>
-      <id>http://localhost:8080/2024/05/10/may-2024-stuff-ive-done-in-unity-lately/</id>
+      <id>https://gamedev.hunterpankey.com/2024/05/10/may-2024-stuff-ive-done-in-unity-lately/</id>
       <content type="html">&lt;p&gt;I’ve been playing with various things in Unity lately, what with the asset store sales on over the past few weeks. I definitely feel guilty (to myself, I guess) for spending a bunch of money on cool models and systems and stuff and not doing enough with them. Everything looks so fun and helpful, and when it’s all 50-70% off of a more or less reasonable starting price, who can resist?&lt;/p&gt;
 &lt;h2&gt;Traffic&lt;/h2&gt;
 &lt;p&gt;I’m somewhat obsessed with putting together a modern city/town scene with some actual life to it. The &lt;a href=&quot;https://syntystore.com/products/polygon-city-pack&quot;&gt;Synty Polygon City&lt;/a&gt; and &lt;a href=&quot;https://syntystore.com/products/polygon-town-pack&quot;&gt;Town&lt;/a&gt; packs are nice, though a bit old at this point, but they’re very stationary and static by default. I’ve done enough of a car traffic system of my own to know what to look for in a traffic system. I’ve now used a couple of traffic systems and have recently worked with the Gley Games &lt;a href=&quot;https://assetstore.unity.com/packages/tools/behavior-ai/mobile-traffic-system-v2-0-277301&quot;&gt;Mobile Traffic System&lt;/a&gt; one.&lt;/p&gt;
@@ -44,9 +44,9 @@
     
     <entry>
       <title>Unity&#39;s TryGetComponent Method</title>
-      <link href="http://localhost:8080/2024/05/11/unitys-trygetcomponent-method/"/>
+      <link href="https://gamedev.hunterpankey.com/2024/05/11/unitys-trygetcomponent-method/"/>
       <updated>2024-05-11T04:35:00Z</updated>
-      <id>http://localhost:8080/2024/05/11/unitys-trygetcomponent-method/</id>
+      <id>https://gamedev.hunterpankey.com/2024/05/11/unitys-trygetcomponent-method/</id>
       <content type="html">&lt;p&gt;Starting in Unity 2019.2, GameObjects now have a &lt;a href=&quot;https://docs.unity3d.com/ScriptReference/Component.TryGetComponent.html&quot;&gt;TryGetComponent()&lt;/a&gt; method that attempts to get a component on the game object and return it (via an out parameter), as well as returning a boolean for whether the operation was successful. One should basically never use the old &lt;a href=&quot;https://docs.unity3d.com/ScriptReference/Component.GetComponent.html&quot;&gt;GameObject.GetComponent()&lt;/a&gt; method now that TryGetComponent() is available. (I’m sure a good use case could be coerced from some scenario, but for most cases, this new one’ll do much better.)&lt;/p&gt;
 &lt;p&gt;Basically, instead of doing:&lt;/p&gt;
 &lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Rigidbody&lt;/span&gt; rb &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token generic-method&quot;&gt;&lt;span class=&quot;token function&quot;&gt;GetComponent&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Rigidbody&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;rb &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token comment&quot;&gt;// do whatever ole thing with the Rigidbody&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -60,14 +60,14 @@
     
     <entry>
       <title>Stellar Scrapm&#39;n, a game for the Playdate console</title>
-      <link href="http://localhost:8080/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/"/>
+      <link href="https://gamedev.hunterpankey.com/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/"/>
       <updated>2025-09-16T03:00:00Z</updated>
-      <id>http://localhost:8080/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/</id>
-      <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-title.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
+      <id>https://gamedev.hunterpankey.com/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;https://gamedev.hunterpankey.com/assets/images/2025/09/playjam-8/stellar-scrapmn-title.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Last weekend, my friend &lt;a href=&quot;https://martymcgui.re/&quot;&gt;Marty&lt;/a&gt; and I built &lt;a href=&quot;https://schmarty.itch.io/stellar-scrapmn&quot;&gt;Stellar Scrapm’n&lt;/a&gt; in a &lt;a href=&quot;https://itch.io/jam/playjam-8/entries&quot;&gt;weekend game jam&lt;/a&gt; for the Playdate. Stellar Scrapm’n is a flyin’ around space, pickin’ up treasures game. It was a lot of fun and a decent amount of frustration building this thing!&lt;/p&gt;
 &lt;p&gt;72 hours is not a lot of time to make a game, it turns out! The theme of the jam is “ascension”, which, of course, can mean a lot of things if you’re willing to accept metaphorical meanings. We ended up making a space salvage game where you navigate the game world using thrust and rotation controls using the Playdate’s crank, avoiding enemy turret fire, shooting back, and collecting scrap parts to turn in for cash.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-1.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-2.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gamedev.hunterpankey.com/assets/images/2025/09/playjam-8/stellar-scrapmn-1.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://gamedev.hunterpankey.com/assets/images/2025/09/playjam-8/stellar-scrapmn-2.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Our version of ascension is of the “&lt;a href=&quot;https://hardspace-shipbreaker.com/&quot;&gt;Hardspace: Shipbreaker&lt;/a&gt;” variety. Having had few options to make your way in this world, you sign an onerous contract to work for peanuts, going into horrendous debt to unlock the possibility of wealth in the space salvage game. Or at least a modicum of comfort in the modern space age.&lt;/p&gt;
 &lt;p&gt;The game is developed for the &lt;a href=&quot;https://play.date/&quot;&gt;Playdate&lt;/a&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Playdate_(console)&quot;&gt;Wiki&lt;/a&gt;), a small handheld console with some interesting and intentional limitations. It’s as if an original Gameboy had a great processor (168 MHz!) and a relative ton of memory (16 MB!). The display is 1-bit monochrome, so it doesn’t even draw some grays. It’s 400x240 pixels and a small display at 2.7&amp;quot;, so it’s actually a pretty nice pixel density, but it does mean that you have to think hard about your sprite size vs. the overall screen size.&lt;/p&gt;
 &lt;p&gt;Anyway, Marty and I would love &lt;a href=&quot;https://itch.io/jam/playjam-8/rate/3886395&quot;&gt;a view and a rating&lt;/a&gt; if any of you are up for it. If you have a Playdate, you can sideload it by downloading the zip from itch and uploading it in the &lt;a href=&quot;https://play.date/account/sideload/&quot;&gt;sideload page&lt;/a&gt;. If you don’t have one, you can &lt;a href=&quot;https://play.date/dev/&quot;&gt;download the SDK&lt;/a&gt; and run it in the simulator.&lt;/p&gt;
