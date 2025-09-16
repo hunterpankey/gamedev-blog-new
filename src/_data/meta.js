@@ -1,5 +1,5 @@
 module.exports = {
-	siteURL: process.env.URL || 'http://localhost:8080',
+	siteURL: process.env.URL || 'https://gamedev.hunterpankey.com',
 	siteName: "GameDev Shenanigans",
 	siteDescription:
 		'Helping fellow gamedev wranglers make sense of this infuriating hobby',
