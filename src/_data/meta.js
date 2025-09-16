@@ -3,7 +3,7 @@ module.exports = {
 	siteName: "GameDev Shenanigans",
 	siteDescription:
 		'Helping fellow gamedev wranglers make sense of this infuriating hobby',
-	siteImage: '/assets/images/site/default.png',
+	siteImage: '/assets/images/home/logo.png',
 	lang: 'en',
 	locale: 'en_us',
 	authorName: 'Hunter Pankey',

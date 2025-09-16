@@ -59,6 +59,7 @@ module.exports = {
 	 */
 	g_showSocialShareIcons: true,
 	// Display individual Share Icons. Above must be 'true' for items below to display.
+	g_showShareBluesky: true,
 	g_showShareLinkedIn: true,
 	g_showSharePinterest: true,
 	g_showShareReddit: true,

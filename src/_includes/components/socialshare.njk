@@ -13,6 +13,14 @@
     Share: 
   </div>
 
+  {% if structure.g_showShareBluesky %}
+    <div>
+      <a rel="noreferrer" aria-label="Share on Bluesky" id="shareviabluesky" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on Bluesky"  href="https://bsky.app/intent/compose?text={{ title | urlencode }} {{ absolutePageUrl }}">
+        {% svg "bluesky", "mx-2 h-6 w-6 fill-current", "Bluesky logo", "share" %}
+      </a>
+    </div>
+  {% endif %}
+
   {% if structure.g_showShareLinkedIn %}
     <div>
       <a rel="noreferrer" aria-label="Share on LinkedIn" id="sharevialinkedin" class="{{ colors.socialShareCustom.color or colors.socialShareDefault.color }} hover:{{ colors.socialShareCustom.hover or colors.socialShareDefault.hover }}" alt="Share on LinkedIn" href="https://linkedin.com/shareArticle?mini=true&title={{ title | urlencode }}&url={{ absolutePageUrl }}" target="_blank">

@@ -11,6 +11,10 @@ tags:
   - gamedev
   - game-announcement
   - playjam
+seo:
+  title:
+  description:
+  image: 2025/09/playjam-8/stellar-scrapmn-title.png
 images: # relative to /src/assets/images/
   feature: 2025/09/playjam-8/playdate-angles.jpg
   thumb: 2025/09/playjam-8/stellar-scrapmn-title.png
