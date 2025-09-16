@@ -4,7 +4,7 @@
   <subtitle>Helping fellow gamedev wranglers make sense of this infuriating hobby</subtitle>
   <link href="http://localhost:8080"/>
   <link href="http://localhost:8080/feed.xml" rel="self"/>
-  <updated>2024-05-11T04:35:00Z</updated>
+  <updated>2025-09-16T03:00:00Z</updated>
   <id>http://localhost:8080</id>
   <author>
     <name>Hunter Pankey</name>
@@ -55,6 +55,22 @@
 &lt;p&gt;They both accomplish basically the same thing, but the second is a little more concise.&lt;/p&gt;
 &lt;p&gt;Note: There’s a similar pattern when raycasting with &lt;a href=&quot;https://docs.unity3d.com/2019.2/Documentation/ScriptReference/Physics.Raycast.html&quot;&gt;Physics.Raycast()&lt;/a&gt; and similar methods:&lt;/p&gt;
 &lt;pre class=&quot;language-csharp&quot;&gt;&lt;code class=&quot;language-csharp&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Physics&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Raycast&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;position&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; direction&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RaycastHit&lt;/span&gt; hit&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; distance&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; layerMask&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token comment&quot;&gt;// hit was successful, use hit variable here&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+    </entry>
+    
+    <entry>
+      <title>Stellar Scrapm&#39;n, a game for the Playdate console</title>
+      <link href="http://localhost:8080/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/"/>
+      <updated>2025-09-16T03:00:00Z</updated>
+      <id>http://localhost:8080/2025/09/16/stellar-scrapmn-a-game-for-the-playdate-console/</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-title.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Last weekend, my friend &lt;a href=&quot;https://martymcgui.re/&quot;&gt;Marty&lt;/a&gt; and I built &lt;a href=&quot;https://schmarty.itch.io/stellar-scrapmn&quot;&gt;Stellar Scrapm’n&lt;/a&gt; in a &lt;a href=&quot;https://itch.io/jam/playjam-8/entries&quot;&gt;weekend game jam&lt;/a&gt; for the Playdate. Stellar Scrapm’n is a flyin’ around space, pickin’ up treasures game. It was a lot of fun and a decent amount of frustration building this thing!&lt;/p&gt;
+&lt;p&gt;72 hours is not a lot of time to make a game, it turns out! The theme of the jam is “ascension”, which, of course, can mean a lot of things if you’re willing to accept metaphorical meanings. We ended up making a space salvage game where you navigate the game world using thrust and rotation controls using the Playdate’s crank, avoiding enemy turret fire, shooting back, and collecting scrap parts to turn in for cash.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-1.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://localhost:8080/assets/images/2025/09/playjam-8/stellar-scrapmn-2.png&quot; alt=&quot;Stellar Scrapm&#39;n&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Our version of ascension is of the “&lt;a href=&quot;https://hardspace-shipbreaker.com/&quot;&gt;Hardspace: Shipbreaker&lt;/a&gt;” variety. Having had few options to make your way in this world, you sign an onerous contract to work for peanuts, going into horrendous debt to unlock the possibility of wealth in the space salvage game. Or at least a modicum of comfort in the modern space age.&lt;/p&gt;
+&lt;p&gt;The game is developed for the &lt;a href=&quot;https://play.date/&quot;&gt;Playdate&lt;/a&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Playdate_(console)&quot;&gt;Wiki&lt;/a&gt;), a small handheld console with some interesting and intentional limitations. It’s as if an original Gameboy had a great processor (168 MHz!) and a relative ton of memory (16 MB!). The display is 1-bit monochrome, so it doesn’t even draw some grays. It’s 400x240 pixels and a small display at 2.7&amp;quot;, so it’s actually a pretty nice pixel density, but it does mean that you have to think hard about your sprite size vs. the overall screen size.&lt;/p&gt;
+&lt;p&gt;Anyway, Marty and I would love &lt;a href=&quot;https://itch.io/jam/playjam-8/rate/3886395&quot;&gt;a view and a rating&lt;/a&gt; if any of you are up for it. If you have a Playdate, you can sideload it by downloading the zip from itch and uploading it in the &lt;a href=&quot;https://play.date/account/sideload/&quot;&gt;sideload page&lt;/a&gt;. If you don’t have one, you can &lt;a href=&quot;https://play.date/dev/&quot;&gt;download the SDK&lt;/a&gt; and run it in the simulator.&lt;/p&gt;
 </content>
     </entry>
 </feed>
